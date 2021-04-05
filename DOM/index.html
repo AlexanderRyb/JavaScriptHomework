@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <button onclick="edit()" type="button" id="edit">edit</button>
+    <button onclick="styling()" type="button" style="background-color: lightblue">style</button>
+
+    <div>
+      <form>
+        <input
+          id="input"
+          value="<p>Lorem ipsum dolor sit amet.</p>
+        
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>"
+          type="text"
+        />
+      </form>
+    </div>
+
+    <button onclick="myFunction()" style="background-color: green">save</button>
+    <div id="styling">
+      <h2 style="width: 100%">Font Size:</h2>
+
+      <form style="display: flex">
+        <br />
+        <input
+          type="radio"
+          id="12px"
+          name="choice"
+          value="12px"
+          onclick="changeFontSize12()"
+        />
+        <label for="12px">12px</label><br />
+        <input type="radio" id="14px" name="choice" value="14px" onclick="changeFontSize14()" />
+        <label for="14px">14px</label><br />
+        <input type="radio" id="16px" name="choice" value="16px" onclick="changeFontSize16()" />
+        <label for="16px">16px</label><br />
+        <input type="radio" id="18px" name="choice" value="18px" onclick="changeFontSize18()" />
+        <label for="18px">18px</label><br />
+        <input type="radio" id="20px" name="choice" value="20px" onclick="changeFontSize20()" />
+        <label for="20px">20px</label>
+      </form>
+      <h2>Font Family</h2>
+      <form>
+        <select name="font" id="font" onclick="changeFontFamily()" >
+          <option value="sens-serif">sens-serif</option>
+          <option value="cursive" >cursive</option>
+          <option value="fantasy">fantasy</option>
+          <option value="monospace" >monospace</option>
+        </select>
+      </form>
+      <h2>Colors</h2>
+      <button onclick="showColorWheelText()" style="margin-bottom: 20px;">Color of Text</button>
+      <div id="color_wheel_text">
+        <div onclick="changeTextColorRed()"  style="background-color: red; width: 100px; height: 100px"></div>
+        <div onclick="changeTextColorBlue()"  style="background-color: blue; width: 100px; height: 100px"></div>
+        <div onclick="changeTextColorGreen()"  style="background-color: green; width: 100px; height: 100px"></div>
+        <div onclick="changeTextColorGrey()"  style="background-color: grey; width: 100px; height: 100px"></div>
+        <div  onclick="changeTextColorYellow()" 
+          style="background-color: yellow; width: 100px; height: 100px"
+        ></div>
+        <div  onclick="changeTextColorBlack()" 
+          style="background-color: black; width: 100px; height: 100px"
+        ></div>
+        <div  onclick="changeTextColorWhite()"  style="background-color: white; width: 100px; height: 100px"></div>
+        <div  onclick="changeTextColorViolet()" 
+          style="background-color: violet; width: 100px; height: 100px"
+        ></div>
+        <div  onclick="changeTextColorAquamarine()" 
+          style="background-color: aquamarine; width: 100px; height: 100px"
+        ></div>
+      </div>
+      <button onclick="showColorWheelBackground()">Background-color</button>
+      <div id="color_wheel_background">
+        <div  onclick="changeBackgroundRed()" id="red" style="background-color: red; width: 100px; height: 100px"></div>
+        <div onclick="changeBackgroundBlue()" id="blue" style="background-color: blue; width: 100px; height: 100px"></div>
+        <div onclick="changeBackgroundGreen()" id="green" style="background-color: green; width: 100px; height: 100px"></div>
+        <div onclick="changeBackgroundGrey()" id="grey" style="background-color: grey; width: 100px; height: 100px"></div>
+        <div onclick="changeBackgroundYellow()" id="yellow"
+          style="background-color: yellow; width: 100px; height: 100px"
+        ></div>
+        <div onclick="changeBackgroundPalevioletred()" id="palevioletred"
+          style="background-color: palevioletred; width: 100px; height: 100px"
+        ></div>
+        <div onclick="changeBackgroundWhite()" id="white" style="background-color: white; width: 100px; height: 100px"></div>
+        <div onclick="changeBackgroundViolet()" id="violet"
+          style="background-color: violet; width: 100px; height: 100px"
+        ></div>
+        <div onclick="changeBackgroundAquamarine()" id="aquamarine"
+          style="background-color: aquamarine; width: 100px; height: 100px"
+        ></div>
+      </div>
+      <h2>Style</h2>
+      <form >
+        <input onclick="isBold()" type="checkbox" id="bold" name="text_style" value="bold" />
+        <label for="bold"> Bold text</label><br />
+        <input onclick="isItalic()" type="checkbox" id="cursive" name="text_style" value="cursive" />
+        <label for="cursive"> Cursive text</label><br />
+      </form>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("output").innerHTML = input.value;
+      }
+      function changeFontSize12(){
+        document.getElementById("output").style.fontSize = "12px";
+      }
+      function changeFontSize14(){
+        document.getElementById("output").style.fontSize = "14px";
+      }
+      function changeFontSize16(){
+        document.getElementById("output").style.fontSize = "16px";
+      }
+      function changeFontSize18(){
+        document.getElementById("output").style.fontSize = "18px";
+      }
+      function changeFontSize20(){
+        document.getElementById("output").style.fontSize = "20px";
+      }
+      function changeFontFamily(){
+        var selectedValue = document.getElementById("font").value;
+document.getElementById("output").style.fontFamily = selectedValue  
+   }
+function changeBackgroundRed(){
+  document.getElementById("output").style.backgroundColor
+   = document.getElementById("red").style.backgroundColor
+}
+function changeBackgroundBlue(){
+  document.getElementById("output").style.backgroundColor
+   = document.getElementById("blue").style.backgroundColor
+}
+function changeBackgroundGreen(){
+  document.getElementById("output").style.backgroundColor
+   = document.getElementById("green").style.backgroundColor
+}
+function changeBackgroundGrey(){
+  document.getElementById("output").style.backgroundColor
+   = document.getElementById("grey").style.backgroundColor
+}
+function changeBackgroundYellow(){
+  document.getElementById("output").style.backgroundColor
+   = document.getElementById("yellow").style.backgroundColor
+}
+function changeBackgroundPalevioletred(){
+  document.getElementById("output").style.backgroundColor
+   = "palevioletred"
+}
+function changeBackgroundWhite(){
+  document.getElementById("output").style.backgroundColor
+   = document.getElementById("white").style.backgroundColor
+}
+function changeBackgroundViolet(){
+  document.getElementById("output").style.backgroundColor
+   = document.getElementById("violet").style.backgroundColor
+}
+function changeBackgroundAquamarine(){
+  document.getElementById("output").style.backgroundColor
+   = document.getElementById("aquamarine").style.backgroundColor
+}
+function changeTextColorRed(){
+  document.getElementById("output").style.color = "red"
+}
+function changeTextColorBlue(){
+  document.getElementById("output").style.color = "blue"
+}
+function changeTextColorGreen(){
+  document.getElementById("output").style.color = "green"
+}
+function changeTextColorGrey(){
+  document.getElementById("output").style.color = "grey"
+}
+function changeTextColorYellow(){
+  document.getElementById("output").style.color = "yellow"
+}
+function changeTextColorBlack(){
+  document.getElementById("output").style.color = "black"
+}
+function changeTextColorWhite(){
+  document.getElementById("output").style.color = "white"
+}
+function changeTextColorViolet(){
+  document.getElementById("output").style.color = "violet"
+}
+function changeTextColorAquamarine(){
+  document.getElementById("output").style.color = "aquamarine"
+}
+function isBold(){
+  if (document.getElementById('bold').checked){
+    document.getElementById("output").style.fontWeight = "bold"
+
+  }
+  else{
+    document.getElementById("output").style.fontWeight = "normal"
+
+  }
+}
+function isItalic(){
+  if (document.getElementById('cursive').checked){
+    document.getElementById("output").style.fontStyle = "italic"
+
+  }
+  else{
+    document.getElementById("output").style.fontStyle = "normal"
+
+  }
+}
+function styling(){
+  document.getElementById("styling").style.display = "flex";
+  document.getElementById("input").style.display = "none";
+
+}
+function edit(){
+  document.getElementById("styling").style.display = "none";
+  document.getElementById("input").style.display = "flex";
+}
+function showColorWheelBackground(){
+  var wheel = document.getElementById("color_wheel_background").style.display
+  if(wheel.match('none')) 
+  {
+  document.getElementById("color_wheel_background").style.display = "flex"
+
+}
+else{
+  document.getElementById("color_wheel_background").style.display = "none"
+}
+}
+
+function showColorWheelText(){
+  var wheel = document.getElementById("color_wheel_text").style.display
+  if (wheel.match('none')){
+    document.getElementById("color_wheel_text").style.display = "flex";
+    console.log('if')
+
+  }
+  else{
+    document.getElementById("color_wheel_text").style.display = "none";
+    console.log('else')
+
+  }
+}
+    </script>
+  </body>
+</html>
