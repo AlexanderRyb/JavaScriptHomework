@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  width: 100%;
+  height: 500px;
+}
+
+.menu {
+  background-color: grey;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.second-menu {
+  display: none;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+  width: 100%;
+}
+.second-menu button {
+  height: 50px;
+}
+button {
+  height: 100%;
+  width: 50px;
+  border: none;
+  font-size: large;
+}
+#input {
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
+}
+input {
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+.bold {
+  font-weight: bold;
+}
+.login-button,
+.logout-button {
+  height: 50px;
+}
+.logout-button {
+  display: none;
+}
+.bold-button,
+.align-left-button,
+.save-button {
+  border-radius: 5px 0px 0px 5px;
+}
+.strike-through-button,
+.align-right-button,
+.ul-button {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.italic {
+  font-style: italic;
+}
+.underline {
+  text-decoration: underline;
+}
+.strike-through {
+  text-decoration: line-through;
+}
+.style-1,
+.style-2,
+.login,
+.code {
+  display: flex;
+  width: auto;
+  height: 50%;
+  justify-content: left;
+  border-radius: 15px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.text-align {
+  display: flex;
+  width: auto;
+  height: 50%;
+  justify-content: left;
+  border-radius: 15px;
+  margin-right: 20px;
+}
+
+.style-2 ul {
+  display: none;
+}
+.font-family-choice.visible {
+  display: block;
+  top: 50px;
+  right: 150px;
+  background-color: white;
+  text-align: left;
+  list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 200px;
+  position: absolute;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.style-2 ul.visible li {
+  padding-top: 10px;
+}
+
+.font-size-choice.visible {
+  display: block;
+  top: 50px;
+  right: 100px;
+  background-color: white;
+  text-align: left;
+  list-style: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 200px;
+  position: absolute;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+#text-color-dialog,
+#background-dialog,
+#log-in-dialog,
+#table-dialog {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+#ol-dialog {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px;
+  justify-content: center;
+}
+
+#ol-dialog *,
+#ul-dialog * {
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+#ol-dialog > button,
+.ul-dialog > button {
+  width: 45%;
+}
+
+#log-in-dialog {
+  display: flex;
+  justify-content: center;
+}
+
+.horizontal-line {
+  border-top: 1px solid #d3d3d3;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.close-button {
+  width: 10%;
+  background: white;
+  color: #7e7e7e;
+  align-self: center;
+  justify-self: center;
+}
+
+.color-grid,
+.background-color-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.color-grid div,
+.background-color-grid div {
+  border-radius: 5px;
+  width: 55px;
+  height: 55px;
+  box-sizing: border-box;
+  margin: 3px;
+}
+.ui-widget-header {
+  background: none;
+}
+
+#ui-id-1,
+.ui-dialog-titlebar {
+  display: none;
+}
+
+#grayout-background {
+  display: none;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 9998;
+}
+.ui-dialog {
+  z-index: 9999 !important ;
+}
+.background-image-grid {
+  display: none;
+  flex-wrap: wrap;
+}
+.background-image-grid div {
+  border-radius: 5px;
+}
+.file-upload {
+  display: none;
+}
+
+#Signin {
+  color: white;
+}
+.form input {
+  border-style: 1px solid #7e7e7e;
+
+  height: 35px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#empty-value,
+#wrong-login-password,
+.invalid-value {
+  display: none;
+  color: #c27371;
+}
+.reset-button {
+  background-color: #e74541;
+}
+.create-table-button,
+.create-ul-button {
+  background-color: #177834;
+}
+
+.create-table-button,
+.reset-button,
+.create-ol-button {
+  height: 40px;
+  border-radius: 5px;
+  color: white;
+  margin: 5px;
+  width: 100%;
+}
+.first-column,
+.second-column {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+}
+.first-column > label,
+.second-column > label {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#table-dialog input {
+  margin-bottom: 5px;
+  height: 30px;
+  padding: 3px;
+}
+
+#color-border,
+#style-border {
+  border-radius: 5px;
+}
+td {
+  width: 20px;
+  height: 20px;
+}
+ol,
+ul {
+  margin-left: 50px;
+}

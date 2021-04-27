@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <div style="margin-top: 50px; margin-left: 250px">
+        Number of Rows:<input type="text"  id="rows">
+        Number of Coloumn: <input type="text" id="cols">
+        <button>Create Table</button>
+        <div id="tableDiv" style="margin-top: 40px">
+            Table will gentare here.
+        </div>
+    </div>
+    <script >
+        $(document).ready(function(){
+            $("button").click(function(){
+              var number_of_rows = $('#rows').val();
+              var number_of_cols = $('#cols').val();
+              var table_body = '<table border="1">';
+              for(var i=0;i<number_of_rows;i++){
+                table_body+='<tr>';
+                for(var j=0;j<number_of_cols;j++){
+                    table_body +='<td>';
+                    table_body +='Table data';
+                    table_body +='</td>';
+                }
+                table_body+='</tr>';
+              }
+                table_body+='</table>';
+               $('#tableDiv').html(table_body);
+            });
+        });
+    </script>
+    
+</body>
+</html>
