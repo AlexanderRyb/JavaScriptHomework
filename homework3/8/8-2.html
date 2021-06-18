@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function emailTest() {
+        let input = prompt();
+        let dog = "@";
+        let count = 0;
+        for (i = 0; i < input.length; i++) {
+          if (input.charAt(i) == dog) {
+            count++;
+          }
+        }
+
+        console.log(
+          count > 0 &&
+            input.charAt(0) != dog &&
+            input.charAt(input.length - 1) != dog
+        );
+      }
+      emailTest();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let getMath = {
+        Pi: function () {
+          return 3.14;
+        },
+        pow: function (number, degree) {
+          var a = 1;
+          if (degree < 0) {
+            for (var i = degree; i < 0; i++) {
+              a *= number;
+            }
+            console.log(1 / a);
+          } else if (degree > 0) {
+            for (var i = 0; i < degree; i++) {
+              a *= number;
+            }
+            console.log(a);
+          } else {
+            console.log("1");
+          }
+        },
+        abs: function (number) {
+          number = +number;
+          return number > 0 ? number : 0 - number;
+        },
+        max: function (...number) {
+          let result = 0;
+          if (number.length == 0) {
+            console.log("Введіть числа!");
+          } else {
+            for (i = 0; i < number.length; i++) {
+              if (number[i] > result) {
+                result = number[i];
+              }
+            }
+            console.log(result);
+          }
+        },
+
+        min: function (...number) {
+          let result = Infinity;
+          if (number.length == 0) {
+            console.log("Введіть числа!");
+          } else {
+            for (i = 0; i < number.length; i++) {
+              if (number[i] < result) {
+                result = number[i];
+              }
+            }
+            console.log(result);
+          }
+        },
+      };
+    </script>
+  </body>
+</html>
