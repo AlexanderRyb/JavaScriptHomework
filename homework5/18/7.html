@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr = [1, -2, 3, 0, 4, -5, 6, -11];
+
+      function check1(a) {
+        return a > 0 ? true : false;
+      }
+      function check2(b) {
+        return Math.sqrt(b);
+      }
+
+      console.log(arr.filter(check1));
+      let myarr = arr.filter(check1);
+
+      let result = [];
+
+      myarr.forEach(myFunction);
+      function myFunction(a) {
+        result.push(Math.sqrt(a));
+      }
+
+      console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="content">
+      <div class="container">
+        <h1>Please Sign Up</h1>
+        <label> <input type="text" placeholder="First name" pattern="[A-Za-z]*" maxlength="20"
+            
+            /><br /> </label>
+        <label> <input type="text" placeholder="Last name" pattern="[A-Za-z]*" maxlength="20"
+            /><br /> </label>
+
+        <label for="email"></label>
+        <input
+          type="text"
+         pattern="^\S+@\S+$"
+          placeholder="Enter Email"
+          name="email"
+          required
+        /><br />
+        <label for="phone"></label>
+        <input
+        id="phone"
+          type="tel"
+          placeholder="Phone number"
+
+          name="phone"
+          required
+        /><br />
+         <label for="psw"></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          pattern="^([a-zA-Z0-9@*#]{8,15})"
+          name="psw"
+          required
+        /><br />
+
+     
+
+        <div>
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </div>
+    </form>
+  </body>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    .content{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+
+    }
+    button {
+      background-color: lightblue;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      width: 100%;
+    }
+  </style>
+  <script>
+   
+   $('#phone').inputmask("+99(999)999-99-99");
+  </script>
+</html>

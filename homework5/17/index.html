@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        border: 1px solid grey;
+        width: 200px;
+        margin: auto;
+        text-align: center;
+      "
+    >
+      <div class="calendar"></div>
+      <h1 class="clock"></h1>
+
+      <div class="timer"></div>
+      <button onclick="incrementTimer()">+</button>
+      <button class="pause-button" onclick="pauseFunction()">Pause</button>
+      <button
+        class="resume-button"
+        style="display: none"
+        onclick="resumeFunction()"
+      >
+        Resume
+      </button>
+      <button class="stop-button" onclick="stopFunction()">Stop</button>
+      <button onclick="decrementTimer()">-</button>
+
+      <div class="stopwatch">00:00:00</div>
+      <button class="start" onclick="startStopwatch()">start</button>
+      <button class="loop" onclick="loopStopwatch()">loop</button>
+      <button class="stop" onclick="pauseStopwatch()">stop</button>
+      <button class="reset" onclick="resetStopwatch()">reset</button>
+    </div>
+    <div
+      class="memory-container"
+      style="
+        border: 1px solid grey;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        text-align: center;
+        overflow-y: auto;
+      "
+    ></div>
+
+    <script>
+      var seconds = 0;
+      let minutes = 0;
+      let hours = 0;
+
+      var stopwatch = setInterval(function () {
+        seconds++;
+
+        if (hours < 10) hours = ("0" + hours).slice(-2);
+        if (minutes < 10) minutes = ("0" + minutes).slice(-2);
+        if (seconds < 10) seconds = ("0" + seconds).slice(-2);
+        hours + ":" + minutes + ":" + seconds;
+
+        if (seconds > 60) {
+          minutes++;
+          seconds = seconds - 60;
+        }
+        if (minutes > 60) {
+          hours++;
+          minutes = minutes - 60;
+        }
+
+        let stopwatchString = hours + ":" + minutes + ":" + seconds;
+
+        $(".stopwatch").html(stopwatchString);
+      }, 100);
+      function pauseStopwatch() {
+        clearInterval(stopwatch);
+      }
+
+      function startStopwatch() {
+        stopwatch = setInterval(function () {
+          seconds++;
+
+          if (hours < 10) hours = ("0" + hours).slice(-2);
+          if (minutes < 10) minutes = ("0" + minutes).slice(-2);
+          if (seconds < 10) seconds = ("0" + seconds).slice(-2);
+          hours + ":" + minutes + ":" + seconds;
+
+          if (seconds > 60) {
+            minutes++;
+            seconds = seconds - 60;
+          }
+          if (minutes > 60) {
+            hours++;
+            minutes = minutes - 60;
+          }
+
+          let stopwatchString = hours + ":" + minutes + ":" + seconds;
+
+          $(".stopwatch").html(stopwatchString);
+        }, 1000);
+      }
+      //
+      function resetStopwatch() {
+        seconds = 0;
+        clearInterval(stopwatch);
+        $(".stopwatch").html("00:00:00");
+      }
+
+      function loopStopwatch() {
+        $(".memory-container").append("<ol>" + $(".stopwatch").html() + "<ol>");
+        console.log();
+      }
+      /////
+      var start = new Date();
+      let counter = 25;
+
+      var time = setInterval(function () {
+        var currentTime = new Date();
+        var currentYear = currentTime.getFullYear();
+        var currentMonth = currentTime.getMonth() + 1;
+        var currentDay = currentTime.getDate();
+        var currentHours = currentTime.getHours();
+        var currentMinutes = currentTime.getMinutes();
+        var currentSeconds = currentTime.getSeconds();
+        //
+        currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
+        currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
+        currentMonth = (currentMonth < 10 ? "0" : "") + currentMonth;
+
+        currentHours = currentHours == 0 ? 12 : currentHours;
+
+        let currentTimeString =
+          currentHours + ":" + currentMinutes + ":" + currentSeconds;
+        let calendarString =
+          currentDay + "." + currentMonth + "." + currentYear;
+
+        $(".clock").text(currentTimeString);
+        $(".calendar").text(calendarString);
+      }, 1000);
+
+      var countdown = setInterval(function () {
+        counter = counter - 1;
+        $(".timer").html(counter);
+        if (counter === 0) {
+          clearInterval(countdown);
+          $(".timer").html(counter);
+        }
+      }, 1000);
+
+      function pauseFunction() {
+        clearInterval(countdown);
+        $(".pause-button").css("display", "none");
+        $(".resume-button").css("display", "inline-block");
+      }
+      function resumeFunction() {
+        $(".resume-button").css("display", "none");
+        $(".pause-button").css("display", "inline-block");
+
+        countdown = setInterval(function () {
+          counter--;
+          $(".timer").html(counter);
+          if (counter === 0) {
+            clearInterval(countdown);
+            timer.html(clearInterval(setup));
+          }
+        }, 1000);
+      }
+      //
+      function stopFunction() {
+        counter = 0;
+        clearInterval(countdown);
+        $(".timer").html(counter);
+
+        $(".pause-button").css("display", "none");
+        $(".resume-button").css("display", "inline-block");
+      }
+
+      //
+      function incrementTimer() {
+        counter++;
+        $(".timer").html(counter);
+      }
+      function decrementTimer() {
+        counter--;
+        $(".timer").html(counter);
+      }
+      //
+    </script>
+  </body>
+</html>
