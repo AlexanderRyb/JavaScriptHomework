@@ -1,0 +1,36 @@
+.task-manager {
+  width: 70%;
+  height: 500px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: flex;
+  margin: auto;
+}
+.task-list {
+  width: 50%;
+  height: auto;
+  border: 1px solid grey;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.task-list label {
+  width: 20%;
+}
+.task-edit {
+  width: 50%;
+  height: auto;
+  border: 1px solid grey;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+input {
+  width: 40%;
+}
+
+button {
+  width: 70px;
+}

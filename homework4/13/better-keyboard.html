@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="keyboard-styles.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="text" name="text" rows="12" cols="50"></textarea>
+
+    <div class="keyboard-base">
+      <div class="first-row">
+        <div class="key 192">`</div>
+        <div class="key 49">1</div>
+        <div class="key 50">2</div>
+        <div class="key 51">3</div>
+        <div class="key 52">4</div>
+        <div class="key 53">5</div>
+        <div class="key 54">6</div>
+        <div class="key 55">7</div>
+        <div class="key 56">8</div>
+        <div class="key 57">9</div>
+        <div class="key 48">0</div>
+        <div class="key 189">-</div>
+        <div class="key 187">=</div>
+        <div class="key backspace 8">Backspace</div>
+      </div>
+      <div class="second-row">
+        <div class="key tab 9">Tab</div>
+        <div class="81 key">q</div>
+        <div class="87 key">w</div>
+        <div class="69 key">e</div>
+        <div class="82 key">r</div>
+        <div class="84 key">t</div>
+        <div class="89 key">y</div>
+        <div class="85 key">u</div>
+        <div class="73 key">i</div>
+        <div class="79 key">o</div>
+        <div class="80 key">p</div>
+        <div class="219 key">[</div>
+        <div class="221 key">]</div>
+        <div class="220 key">\</div>
+      </div>
+      <div class="third-row">
+        <div class="key capslock 20">CapsLock</div>
+        <div class="key 65">a</div>
+        <div class="key 83">s</div>
+        <div class="key 68">d</div>
+        <div class="key 70">f</div>
+        <div class="key 71">g</div>
+        <div class="key 72">h</div>
+        <div class="key 74">j</div>
+        <div class="key 75">k</div>
+        <div class="key 76">l</div>
+        <div class="key 186">;</div>
+        <div class="key 222">'</div>
+        <div class="key enter 13">Enter</div>
+      </div>
+      <div class="fourth-row">
+        <div class="key shift 16">Shift</div>
+        <div class="key 90">z</div>
+        <div class="key 88">x</div>
+        <div class="key 67">c</div>
+        <div class="key 86">v</div>
+        <div class="key 66">b</div>
+        <div class="key 78">n</div>
+        <div class="key 77">m</div>
+        <div class="key 188">,</div>
+        <div class="key 190">.</div>
+        <div class="key 191">/</div>
+        <div class="key shift 16">Shift</div>
+      </div>
+      <div class="key space 32"></div>
+    </div>
+    <script>
+      $(document).keydown(function (event) {
+        let keycode = event.which;
+
+        $("." + keycode).css("background-color", "#7B7B7B");
+      });
+      $(document).keyup(function (event) {
+        let keycode = event.which;
+        $("." + keycode).css("background-color", "white");
+      });
+    </script>
+  </body>
+</html>

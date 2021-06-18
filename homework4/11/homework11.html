@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>My page</title>
+  </head>
+  <body>
+    <h1>My page</h1>
+    <p class="link-paragraph">
+      мої улюблені сайти:
+      <a class="first-link" href="http://">google</a>
+      <a class="second-link" href="http://">w3schools</a>
+      <a class="third-link" href="http://">stackoverflow</a>
+    </p>
+    <div style="display: flex">
+      <div style="width: 50%">
+        За допомогою JavaScript запропонувати користувачу вибрати стиль для
+        сторінки. А саме:
+        <ul>
+          <li>фон для сторінки</li>
+          <li>тип шрифта на сторінці</li>
+          <li>вирівнювання для заголовка h1</li>
+          <li>фон для параграфа зі зсилками</li>
+          <li>
+            колір тексту у параграфі зі зсилками і для самих зсилок. При чому
+            колір тексту для зсилок призначити у циклі
+          </li>
+          <li>колір, розмір, товщину тексту у елементі div</li>
+          <li>тип маркера для маркованого списку на сторінці</li>
+        </ul>
+        Таким чином слід запропонувати користувачу ввести десять налаштувань
+        сторінки і застосувати їх.<br />
+        ДОДАТОК ДО ЗАВДАННЯ: замість зсилок на конкретні сайти, вивести у панелі
+        навігації зсилки на три сайти, які вкаже користувач. <br />
+        Наприклад користувач у віконце prompt() ввів адресу football24.ua - в
+        такому разі треба створити зсилку, яка вела б на сайт football24, а
+        текстом цієї зсилки (тим, по чому можна клікнути) буде також
+        football24.ua
+      </div>
+      <div class="style-settings">
+        <div class="main-background-color">
+          Оберіть фон:
+          <br />
+          <input type="radio" id="red" name="background-color" value="red" />
+          <label for="red">Червоний</label>
+          <input
+            type="radio"
+            id="green"
+            name="background-color"
+            value="green"
+          />
+          <label for="green">Зелений</label>
+          <input
+            type="radio"
+            id="yellow"
+            name="background-color"
+            value="yellow"
+          />
+          <label for="yellow">Жовтий</label>
+
+          <hr />
+        </div>
+        <div class="font-family">
+          Оберіть тип шрифта:
+          <br />
+
+          <input type="radio" id="Arial" name="font-family" value="Arial" />
+          <label for="Arial">Arial</label>
+          <input type="radio" id="Impact" name="font-family" value="Impact" />
+          <label for="Impact">Impact</label>
+          <input type="radio" id="Giorgia" name="font-family" value="Giorgia" />
+          <label for="Giorgia">Giorgia</label>
+          <hr />
+        </div>
+        <div class="header">
+          Вирівнювання заголовка
+          <br />
+
+          <input type="radio" id="center" name="header" value="center" />
+          <label for="center">Центр</label><br />
+          <input type="radio" id="left" name="header" value="left" />
+          <label for="female">Зліва</label><br />
+          <input type="radio" id="right" name="header" value="right" />
+          <label for="other">Зправа</label>
+          <hr />
+        </div>
+        <div class="link-paragraph-background">
+          Фон для параграфа зі зсилками
+          <br />
+
+          <input
+            type="radio"
+            id="blue"
+            name="link-paragraph-background"
+            value="blue"
+          />
+          <label for="blue">Блакитний</label>
+          <input
+            type="radio"
+            id="grey"
+            name="link-paragraph-background"
+            value="grey"
+          />
+          <label for="blue">сірий</label>
+          <hr />
+        </div>
+        <div class="paragraph-text-color">
+          колір тексту у параграфі зі зсилками
+          <br />
+          <input
+            type="radio"
+            id="black-paragraph-text"
+            name="link-paragraph-color"
+            value="black"
+          />
+          <label for="black-paragraph-text">Чорний</label>
+          <input
+            type="radio"
+            id="blue-paragraph-text"
+            name="link-paragraph-color"
+            value="blue"
+          />
+          <label for="blue-paragraph-text">Блакитний</label>
+          <input
+            type="radio"
+            id="red-paragraph-text"
+            name="link-paragraph-color"
+            value="red"
+          />
+          <label for="red-paragraph-text">Червоний</label>
+
+          <hr />
+        </div>
+        <div class="link-color">
+          <button class="change-link-color">Змінити колір зсилок</button>
+          <br />
+        </div>
+        <hr />
+        <div class="text-color">
+          Колір тексту
+          <br />
+
+          <input type="radio" id="green-text" name="text-color" value="green" />
+          <label for="green-text">Зелений</label>
+          <input type="radio" id="red-text" name="text-color" value="red" />
+          <label for="green-text">Червоний</label>
+          <input type="radio" id="blue-text" name="text-color" value="blue" />
+          <label for="green-text">Блакитний</label>
+          <hr />
+        </div>
+        <div class="text-size">
+          Розмір тексту
+          <br />
+
+          <input type="radio" id="12px" name="text-size" value="12px" />
+          <label for="12px">12px</label>
+          <input type="radio" id="16px" name="text-size" value="16px" />
+          <label for="16px">16px</label>
+          <input type="radio" id="20px" name="text-size" value="20px" />
+          <label for="20px">20px</label>
+          <hr />
+        </div>
+        <div class="font-weight">
+          Товщина тексту
+          <br />
+          <input type="radio" id="lighter" name="font-weight" value="lighter" />
+          <label for="lighter">lighter</label>
+          <input type="radio" id="normal" name="font-weight" value="normal" />
+          <label for="normal">normal</label>
+          <input type="radio" id="bold" name="font-weight" value="bold" />
+          <label for="bold">bold</label>
+          <hr />
+        </div>
+        <div class="list-style-type">
+          Тип маркера
+          <br />
+
+          <input type="radio" id="disc" name="list-type" value="disc" />
+          <label for="blue">Диск</label>
+          <input type="radio" id="circle" name="list-type" value="circle" />
+          <label for="blue">Коло</label>
+          <input type="radio" id="square" name="list-type" value="square" />
+          <label for="blue">Квадрат</label>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $(".main-background-color").change(function () {
+          selected_value = $("input[name='background-color']:checked").val();
+          $("body").css("background-color", selected_value);
+        });
+      });
+      $(document).ready(function () {
+        $(".font-family").change(function () {
+          selected_value = $("input[name='font-family']:checked").val();
+          $("body").css("font-family", selected_value);
+        });
+      });
+      $(document).ready(function () {
+        $(".header").change(function () {
+          selected_value = $("input[name='header']:checked").val();
+          $("h1").css("text-align", selected_value);
+        });
+      });
+      $(document).ready(function () {
+        $(".link-paragraph-background").change(function () {
+          selected_value = $(
+            "input[name='link-paragraph-background']:checked"
+          ).val();
+          $(".link-paragraph").css("background-color", selected_value);
+        });
+      });
+
+      $(document).ready(function () {
+        $(".paragraph-text-color").change(function () {
+          selected_value = $(
+            "input[name='link-paragraph-color']:checked"
+          ).val();
+          $(".link-paragraph").css("color", selected_value);
+        });
+      });
+
+      //
+      $(document).ready(function () {
+        let linkColor = ["black", "blue", "green", "red"];
+        let counter = 0;
+        $(".change-link-color").click(function () {
+          if (counter < 4) {
+            $("a").css("color", linkColor[counter]);
+            counter++;
+          } else {
+            counter = 0;
+            $("a").css("color", linkColor[counter]);
+            counter++;
+          }
+        });
+      });
+
+      $(document).ready(function () {
+        $(".text-color").change(function () {
+          selected_value = $("input[name='text-color']:checked").val();
+          $("div").css("color", selected_value);
+        });
+      });
+      $(document).ready(function () {
+        $(".text-size").change(function () {
+          selected_value = $("input[name='text-size']:checked").val();
+          $("div").css("font-size", selected_value);
+        });
+      });
+      $(document).ready(function () {
+        $(".font-weight").change(function () {
+          selected_value = $("input[name='font-weight']:checked").val();
+          $("div").css("font-weight", selected_value);
+        });
+      });
+      $(document).ready(function () {
+        $(".list-style-type").change(function () {
+          selected_value = $("input[name='list-type']:checked").val();
+          $("ul").css("list-style-type", selected_value);
+        });
+      });
+      //
+      // let website1 = prompt();
+      // let website2 = prompt();
+      // let website3 = prompt();
+
+      // $(".first-link").attr("href", website1);
+      // $(".first-link").html(website1);
+
+      // $(".second-link").attr("href", website2);
+      // $(".second-link").html(website2);
+
+      // $(".third-link").attr("href", website3);
+      // $(".third-link").html(website3);
+    </script>
+  </body>
+</html>

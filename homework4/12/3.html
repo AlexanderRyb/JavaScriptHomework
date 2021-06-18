@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="one"
+      style="
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        background-size: cover;
+      "
+    ></div>
+    <div
+      class="two"
+      style="
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        background-size: cover;
+      "
+    ></div>
+    <div
+      class="three"
+      style="
+        width: 400px;
+        height: 400px;
+        border: 1px solid black;
+        background-size: cover;
+      "
+    ></div>
+
+    <script>
+      $(".one").click(function () {
+        let background = prompt();
+        $(".one").css("background-image", "url('" + background + "')");
+      });
+      $(".two").click(function () {
+        let background = prompt();
+        $(".two").css("background-image", "url('" + background + "')");
+      });
+      $(".three").click(function () {
+        let background = prompt();
+        $(".three").css("background-image", "url('" + background + "')");
+      });
+    </script>
+  </body>
+</html>

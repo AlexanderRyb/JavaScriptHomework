@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="keyboard-styles.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="text" name="text" rows="12" cols="50"></textarea>
+    <div class="keyboard-base">
+      <div class="first-row">
+        <div class="key">`</div>
+        <div class="key">1</div>
+        <div class="key">2</div>
+        <div class="key">3</div>
+        <div class="key">4</div>
+        <div class="key">5</div>
+        <div class="key">6</div>
+        <div class="key">7</div>
+        <div class="key">8</div>
+        <div class="key">9</div>
+        <div class="key">0</div>
+        <div class="key">-</div>
+        <div class="key">=</div>
+        <div class="key backspace">Backspace</div>
+      </div>
+      <div class="second-row">
+        <div class="key tab">Tab</div>
+        <div class="key">q</div>
+        <div class="key">w</div>
+        <div class="key">e</div>
+        <div class="key">r</div>
+        <div class="key">t</div>
+        <div class="key">y</div>
+        <div class="key">u</div>
+        <div class="key">i</div>
+        <div class="key">o</div>
+        <div class="key">p</div>
+        <div class="key">[</div>
+        <div class="key">]</div>
+        <div class="key">\</div>
+      </div>
+      <div class="third-row">
+        <div class="key capslock">CapsLock</div>
+        <div class="key">a</div>
+        <div class="key">s</div>
+        <div class="key">d</div>
+        <div class="key">f</div>
+        <div class="key">g</div>
+        <div class="key">h</div>
+        <div class="key">j</div>
+        <div class="key">k</div>
+        <div class="key">l</div>
+        <div class="key">;</div>
+        <div class="key">'</div>
+        <div class="key enter">Enter</div>
+      </div>
+      <div class="fourth-row">
+        <div class="key shift">Shift</div>
+        <div class="key">z</div>
+        <div class="key">x</div>
+        <div class="key">c</div>
+        <div class="key">v</div>
+        <div class="key">b</div>
+        <div class="key">n</div>
+        <div class="key">m</div>
+        <div class="key">,</div>
+        <div class="key">.</div>
+        <div class="key">/</div>
+        <div class="key shift">Shift</div>
+      </div>
+      <div class="key space"></div>
+    </div>
+    <script>
+      $(document).keydown(function (event) {
+        if (event.which == 192) {
+          $(" .first-row div:nth-child(1)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 192) {
+          $(" .first-row div:nth-child(1)").css("background-color", "white");
+        }
+      });
+      //
+
+      $(document).keydown(function (event) {
+        if (event.which == 49) {
+          $(" .first-row div:nth-child(2)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 49) {
+          $(" .first-row div:nth-child(2)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 50) {
+          $(" .first-row div:nth-child(3)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 50) {
+          $(" .first-row div:nth-child(3)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 51) {
+          $(" .first-row div:nth-child(4)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 51) {
+          $(" .first-row div:nth-child(4)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 52) {
+          $(" .first-row div:nth-child(5)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 52) {
+          $(" .first-row div:nth-child(5)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 53) {
+          $(" .first-row div:nth-child(6)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 53) {
+          $(" .first-row div:nth-child(6)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 54) {
+          $(" .first-row div:nth-child(7)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 54) {
+          $(" .first-row div:nth-child(7)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 55) {
+          $(" .first-row div:nth-child(8)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 55) {
+          $(" .first-row div:nth-child(8)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 56) {
+          $(" .first-row div:nth-child(9)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 56) {
+          $(" .first-row div:nth-child(9)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 57) {
+          $(" .first-row div:nth-child(10)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 57) {
+          $(" .first-row div:nth-child(10)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 48) {
+          $(" .first-row div:nth-child(11)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 48) {
+          $(" .first-row div:nth-child(11)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 189) {
+          $(" .first-row div:nth-child(12)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 189) {
+          $(" .first-row div:nth-child(12)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 187) {
+          $(" .first-row div:nth-child(13)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 187) {
+          $(" .first-row div:nth-child(13)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 8) {
+          $(" .first-row div:nth-child(14)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 8) {
+          $(" .first-row div:nth-child(14)").css("background-color", "white");
+        }
+      }); //
+      // second row
+      $(document).keydown(function (event) {
+        if (event.which == 9) {
+          $(" .second-row div:nth-child(1)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 9) {
+          $(" .second-row div:nth-child(1)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 81) {
+          $(" .second-row div:nth-child(2)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 81) {
+          $(" .second-row div:nth-child(2)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 87) {
+          $(" .second-row div:nth-child(3)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 87) {
+          $(" .second-row div:nth-child(3)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 69) {
+          $(" .second-row div:nth-child(4)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 69) {
+          $(" .second-row div:nth-child(4)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 82) {
+          $(" .second-row div:nth-child(5)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 82) {
+          $(" .second-row div:nth-child(5)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 84) {
+          $(" .second-row div:nth-child(6)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 84) {
+          $(" .second-row div:nth-child(6)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 89) {
+          $(" .second-row div:nth-child(7)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 89) {
+          $(" .second-row div:nth-child(7)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 85) {
+          $(" .second-row div:nth-child(8)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 85) {
+          $(" .second-row div:nth-child(8)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 73) {
+          $(" .second-row div:nth-child(9)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 73) {
+          $(" .second-row div:nth-child(9)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 79) {
+          $(" .second-row div:nth-child(10)").css(
+            "background-color",
+            "#7B7B7B"
+          );
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 79) {
+          $(" .second-row div:nth-child(10)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 80) {
+          $(" .second-row div:nth-child(11)").css(
+            "background-color",
+            "#7B7B7B"
+          );
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 80) {
+          $(" .second-row div:nth-child(11)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 219) {
+          $(" .second-row div:nth-child(12)").css(
+            "background-color",
+            "#7B7B7B"
+          );
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 219) {
+          $(" .second-row div:nth-child(12)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 221) {
+          $(" .second-row div:nth-child(13)").css(
+            "background-color",
+            "#7B7B7B"
+          );
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 221) {
+          $(" .second-row div:nth-child(13)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 220) {
+          $(" .second-row div:nth-child(14)").css(
+            "background-color",
+            "#7B7B7B"
+          );
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 220) {
+          $(" .second-row div:nth-child(14)").css("background-color", "white");
+        }
+      }); //
+      //third-row
+      $(document).keydown(function (event) {
+        if (event.which == 20) {
+          $(" .third-row div:nth-child(1)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 20) {
+          $(" .third-row div:nth-child(1)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 65) {
+          $(" .third-row div:nth-child(2)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 65) {
+          $(" .third-row div:nth-child(2)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 83) {
+          $(" .third-row div:nth-child(3)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 83) {
+          $(" .third-row div:nth-child(3)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 68) {
+          $(" .third-row div:nth-child(4)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 68) {
+          $(" .third-row div:nth-child(4)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 70) {
+          $(" .third-row div:nth-child(5)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 70) {
+          $(" .third-row div:nth-child(5)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 71) {
+          $(" .third-row div:nth-child(6)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 71) {
+          $(" .third-row div:nth-child(6)").css("background-color", "white");
+        }
+      }); //
+
+      $(document).keydown(function (event) {
+        if (event.which == 72) {
+          $(" .third-row div:nth-child(7)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 72) {
+          $(" .third-row div:nth-child(7)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 74) {
+          $(" .third-row div:nth-child(8)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 74) {
+          $(" .third-row div:nth-child(8)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 75) {
+          $(" .third-row div:nth-child(9)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 75) {
+          $(" .third-row div:nth-child(9)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 76) {
+          $(" .third-row div:nth-child(10)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 76) {
+          $(" .third-row div:nth-child(10)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 186) {
+          $(" .third-row div:nth-child(11)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 186) {
+          $(" .third-row div:nth-child(11)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 222) {
+          $(" .third-row div:nth-child(12)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 222) {
+          $(" .third-row div:nth-child(12)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 13) {
+          $(" .third-row div:nth-child(13)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 13) {
+          $(" .third-row div:nth-child(13)").css("background-color", "white");
+        }
+      }); //
+      //fourth-row
+      $(document).keydown(function (event) {
+        if (event.which == 16) {
+          $(" .fourth-row div:nth-child(1)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 16) {
+          $(" .fourth-row div:nth-child(1)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 90) {
+          $(" .fourth-row div:nth-child(2)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 90) {
+          $(" .fourth-row div:nth-child(2)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 88) {
+          $(" .fourth-row div:nth-child(3)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 88) {
+          $(" .fourth-row div:nth-child(3)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 67) {
+          $(" .fourth-row div:nth-child(4)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 67) {
+          $(" .fourth-row div:nth-child(4)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 86) {
+          $(" .fourth-row div:nth-child(5)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 86) {
+          $(" .fourth-row div:nth-child(5)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 66) {
+          $(" .fourth-row div:nth-child(6)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 66) {
+          $(" .fourth-row div:nth-child(6)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 78) {
+          $(" .fourth-row div:nth-child(7)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 78) {
+          $(" .fourth-row div:nth-child(7)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 77) {
+          $(" .fourth-row div:nth-child(8)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 77) {
+          $(" .fourth-row div:nth-child(8)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 188) {
+          $(" .fourth-row div:nth-child(9)").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 188) {
+          $(" .fourth-row div:nth-child(9)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 190) {
+          $(" .fourth-row div:nth-child(10)").css(
+            "background-color",
+            "#7B7B7B"
+          );
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 190) {
+          $(" .fourth-row div:nth-child(10)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 191) {
+          $(" .fourth-row div:nth-child(11)").css(
+            "background-color",
+            "#7B7B7B"
+          );
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 191) {
+          $(" .fourth-row div:nth-child(11)").css("background-color", "white");
+        }
+      }); //
+      $(document).keydown(function (event) {
+        if (event.which == 16) {
+          $(" .fourth-row div:nth-child(12)").css(
+            "background-color",
+            "#7B7B7B"
+          );
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 16) {
+          $(" .fourth-row div:nth-child(12)").css("background-color", "white");
+        }
+      }); //
+      //space
+      $(document).keydown(function (event) {
+        if (event.which == 32) {
+          $(" .space").css("background-color", "#7B7B7B");
+        }
+      });
+      $(document).keyup(function (event) {
+        if (event.which == 32) {
+          $(" .space").css("background-color", "white");
+        }
+      }); //
+    </script>
+  </body>
+</html>

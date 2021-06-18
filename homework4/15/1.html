@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="task-manager">
+      <div class="task-list">
+        <h1>Список завдань</h1>
+      </div>
+      <div class="task-edit">
+        <h1>Додати нове завдання</h1>
+        <input type="text" /><br />
+        <button>Додати</button>
+      </div>
+    </div>
+    <script>
+      $("button").click(function () {
+        if ($('input[type="text"]').val() != "") {
+          var text = $('input[type="text"]').val();
+          var data = "<label><input type='checkbox' >" + text + "</label>";
+          $(".task-list").append(data);
+        } else {
+          alert("Пусте поле не можна добавити");
+        }
+      });
+
+      $(".task-list").on("click", "label", function () {
+        var count = $(".task-list label").length;
+
+        if (count < 2) {
+          console.log(count);
+          alert("Останній таск зі списку Ви не можете видалити");
+        } else {
+          $(this).remove();
+          console.log(count);
+        }
+      });
+    </script>
+  </body>
+</html>

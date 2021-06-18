@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <title>Document</title>
+    <style>
+      button {
+        background-color: lightgreen;
+        border: none;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Task move</h1>
+    <p>
+      Значення переміщується з одного інпута в інший тільки якщо там є значення
+    </p>
+    <input name="one" value="" />
+    <button>move</button>
+    <input name="two" value="" />
+
+    <h1>Task placeholder</h1>
+    <p>Значення переміщується в placeholder тільки якщо там є значення</p>
+    <input name="three" value="" />
+  </body>
+  <script>
+    $("button").click(function () {
+      var firstValue = $("input[name='one']").val();
+      console.log(firstValue);
+      if (firstValue != "") {
+        $("input[name='two']").val(firstValue);
+      }
+    });
+    $("input[name='three']").focusout(function () {
+      var secondValue = $("input[name='three']").val();
+      $("input[name='three']").attr("placeholder", secondValue);
+      $("input[name='three']").val("");
+    });
+  </script>
+</html>

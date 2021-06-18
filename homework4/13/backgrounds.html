@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="color">Колір</h1>
+    <h1 class="image">Зображення</h1>
+    <div class="color-grid">
+        <div style="background-color: #c28934"></div>
+        <div style="background-color: #089083"></div>
+        <div style="background-color: #1fb66c"></div>
+        <div style="background-color: #1b779b"></div>
+        <div style="background-color: #1b9b5e"></div>
+        <div style="background-color: #207ab9"></div>
+        <div style="background-color: #b2e66f"></div>
+        <div style="background-color: #9051ad"></div>
+        <div style="background-color: #31485e"></div>
+    </div>
+    <div class="image-grid">     
+        <div
+          style="
+            background-image: url(/images/image-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+        <div
+          style="
+            background-image: url(/images/image-2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+        <div
+          style="
+            background-image: url(/images/image-3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+      
+        <div
+          style="
+            background-image: url(/images/image-4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+        <div
+          style="
+            background-image: url(/images/image-5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+        <div
+          style="
+            background-image: url(/images/image-6.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+     
+      
+        <div
+          style="
+            background-image: url(/images/image-7.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+        <div
+          style="
+            background-image: url(/images/image-8.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+        <div
+          style="
+            background-image: url(/images/image-9.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        ></div>
+      </div>
+    
+
+    <script>
+$(document).ready(function () {
+  $(".color").click(function () {
+    $(".color-grid").css("display", "flex");
+    $(".image-grid").css("display", "none")
+
+  });
+});
+$(document).ready(function () {
+  $(".image").click(function () {
+    $(".image-grid").css("display", "flex")
+    $(".color-grid").css("display", "none");;
+  });
+});
+// background colors
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(1)").click(function () {
+    $("body").css("background-color", "#c28934");
+    $("body").css("background-image", "none");
+
+  });
+});
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(2)").click(function () {
+    $("body").css("background-color", "#089083");
+    $("body").css("background-image", "none");
+
+  });
+});
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(3)").click(function () {
+    $("body").css("background-color", "#1fb66c");
+    $("body").css("background-image", "none");
+
+  });
+});
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(4)").click(function () {
+    $("body").css("background-color", "#1b779b");
+    $("body").css("background-image", "none");
+
+  });
+});
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(5)").click(function () {
+    $("body").css("background-color", "#1b9b5e");
+    $("body").css("background-image", "none");
+
+  });
+});
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(6)").click(function () {
+    $("body").css("background-color", "#207ab9");
+    $("body").css("background-image", "none");
+
+  });
+});
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(7)").click(function () {
+    $("body").css("background-color", "#b2e66f");
+    $("body").css("background-image", "none");
+
+  });
+});
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(8)").click(function () {
+    $("body").css("background-color", "#9051ad");
+    $("body").css("background-image", "none");
+
+  });
+});
+$(document).ready(function () {
+  $(".color-grid div:nth-of-type(9)").click(function () {
+    $("body").css("background-color", "#31485e");
+    $("body").css("background-image", "none");
+
+  });
+});
+//background image
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(1)").click(function () {
+    $("body").css("background-image", "url(/images/image-1.jpg)");
+  });
+});
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(2)").click(function () {
+    $("body").css("background-image", "url(/images/image-2.jpg)");
+  });
+});
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(3)").click(function () {
+    $("body").css("background-image", "url(/images/image-3.jpg)");
+  });
+});
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(4)").click(function () {
+    $("body").css("background-image", "url(/images/image-4.jpg)");
+  });
+});
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(5)").click(function () {
+    $("body").css("background-image", "url(/images/image-5.jpg)");
+  });
+});
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(6)").click(function () {
+    $("body").css("background-image", "url(/images/image-6.jpg)");
+  });
+});
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(7)").click(function () {
+    $("body").css("background-image", "url(/images/image-7.jpg)");
+  });
+});
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(8)").click(function () {
+    $("body").css("background-image", "url(/images/image-8.jpg)");
+  });
+});
+$(document).ready(function () {
+  $(".image-grid div:nth-of-type(9)").click(function () {
+    $("body").css("background-image", "url(/images/image-9.jpg)");
+  });
+});
+    </script>
+</body>
+</html>

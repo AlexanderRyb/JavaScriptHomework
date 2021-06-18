@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <form>
+      <div>
+        <h2>Create Your account</h2>
+      </div>
+      <label for="first-name">First Name</label><br />
+      <input id="first-name" placeholder="type here..." name="first-name" />
+      <br />
+      <label for="last-name">Second Name</label><br />
+
+      <input id="last-name" placeholder="type here..." name="last-name" /><br />
+
+      <label for="email">Email</label><br />
+
+      <input id="email" placeholder="type here..." name="email" /> <br />
+
+      <input type="radio" id="male" name="gender" value="male" />
+      <label for="male">Male</label>
+
+      <input type="radio" id="female" name="gender" value="female" />
+      <label for="female">Female</label><br />
+
+      <label for="position">Position</label>
+      <select name="position">
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+        <option value="QCQA">QC/QA</option></select
+      ><br />
+      <input type="checkbox" name="terms" />
+      <label for="terms">I agree with all statements in Terms of service</label
+      ><br />
+      <button type="button" disabled>Sign Up</button>
+    </form>
+
+    <div class="profile">
+      <div class="profile-picture"></div>
+      <p class="full-name"></p>
+      <br />
+      <p class="user-email"></p>
+      <br />
+      <p class="user-position"></p>
+      <br />
+      <button class="sign-out">Sign Out</button>
+    </div>
+    <script>
+      $('input[type="checkbox"]').click(function () {
+        var inputValue = $(this).attr("value");
+        $("." + inputValue).toggle();
+      });
+
+      $('input[type="checkbox"').change(function () {
+        $("button").attr("disabled", !this.checked);
+      });
+      //
+      $("button").click(function () {
+        $("form").css("display", "none");
+        $(".profile").css("display", "inline-block");
+        var fName = $("#first-name").val();
+        var lName = $("#last-name").val();
+        var mail = $("#email").val();
+        var pos = $("select").val();
+        var gender = $("form input[type='radio']:checked").val();
+
+        $(".full-name").html(fName + " " + lName);
+        $(".user-email").html(mail);
+        $(".user-position").html(pos);
+        $(".profile-picture").css(
+          "background-image",
+          "url('" + gender + ".jpg')"
+        );
+      });
+
+      //
+      $(".sign-out").click(function () {
+        location.reload();
+      });
+    </script>
+  </body>
+</html>
